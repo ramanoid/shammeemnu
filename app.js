@@ -18,7 +18,10 @@ app.get('/',(req,res)=>{
 //  console.log(chalk.red('listening at')+chalk.green('8181'));
 bookrouter.route('/')
     .get((req,res)=>{
-        res.send("halla");
+        res.render('books',{vale:"library",nav:[
+            {link:'/books',title:'books'}
+        ,{link:'/authors',title:"authors"},
+        {link:'/podcasts',title:'podcasts'}]});
     });
 
 app.use('/books',bookrouter);    
