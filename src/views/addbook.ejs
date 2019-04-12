@@ -6,12 +6,12 @@
 		<title>Storystrap Template</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -89,27 +89,38 @@
           
           
           
-          <!--/stories-->
-          <%for(var i=0;i<books.length;i++){%>
-          <div class="row">    
-            <br>
-            <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="http://api.randomuser.me/portraits/thumb/men/58.jpg" style="width:100px;height:100px" class="img-circle"></a>
-            </div>
-            <div class="col-md-10 col-sm-9">
-              <h3><%=books[i].title%></h3>
-              <div class="row">
-                <div class="col-xs-9">
-                  <h4><span class="label label-default"><%=books[i].author%></span></h4><h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • <a href="/books/<%=books[i]._id%>" class="text-muted">Read More</a></small>
-                  </h4></div>
-                <div class="col-xs-3"></div>
-              </div>
-              <br><br>
-            </div>
-          </div>
-          <hr>
-          <%}%>
+          <!--/form body-->
+          <form action="addbook/add" method="GET" class="was-validated">
+    <div class="form-group">
+      <label for="uname">Bookname:</label>
+      <input type="text" class="form-control" id="uname" placeholder="Enter bookname" name="title" required>
+      
+      <div class="invalid-feedback"></div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Auther Name</label>
+      <input type="text" class="form-control" id="pwd" placeholder="Enter author" name="author" required>
+      
+      <div class="invalid-feedback"></div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">year</label>
+      <input type="text" class="form-control" id="pwd" placeholder="Enter year" name="year" required>
+      
+      <div class="invalid-feedback"></div>
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember" required> NEW BOOK.
+        
+        <div class="invalid-feedback"></div>
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<%# formbody           %>
           
                   
           

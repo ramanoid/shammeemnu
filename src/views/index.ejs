@@ -3,15 +3,15 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>ICTACT</title>
+		<title>Storystrap Template</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="/css/styles.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -27,9 +27,11 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <%for (var i=0;i<nav.length;i++){%>
-            <li><a href="<%=nav[i].link%>"><%=nav[i].title%></a></li>
-            <%}%>
+        <%for(var i=0;i<nav.length;i++){%>
+        <li><a href="<%=nav[i].link%>"><%=nav[i].title%></a>
+        </li>
+        <%}%>
+         
       </ul>
       <ul class="nav navbar-right navbar-nav">
         <li class="dropdown">
@@ -49,8 +51,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7">
-        <%# this is the value parsing of vale with %=% %>
-        <h1><%=vale%>     <%#ehhh%>
+        <h1> <%=title%>
           <p class="lead"></p>
         </h1>
       </div>
